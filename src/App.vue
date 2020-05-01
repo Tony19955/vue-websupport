@@ -31,7 +31,7 @@
           </template>
 
           <template v-slot:append> 
-            <span v-if="required === true" class="not-required">(nepovinné)</span>
+            <span class="not-required">(nepovinné)</span>
           </template>
           
         </q-input>
@@ -94,8 +94,7 @@ export default {
       search: '',
       emails: '',
       text: '',
-      phone: '',
-      required: true,
+      phone: '',      
     }  
   },
   computed: {
