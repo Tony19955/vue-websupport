@@ -6,7 +6,7 @@
       <div class="input-container">
         <q-input class="input-default input-w-btn" 
           square outlined
-          v-model="text"       
+          v-model="coupon"       
           label="Sem vložte kupón"
           :rules="[val => val !== 'JFHSO4663J' || 'Tento kupón platí pre hosting do 3GB']"
         />       
@@ -59,7 +59,7 @@
           bg-color="dark"          
           label-color="primary"
           square outlined
-          v-model="text"  
+          v-model="search"  
           label="Invoice search">
 
           <template v-slot:append>
@@ -75,7 +75,7 @@
         <q-input class="input-default"                        
           autogrow           
           square outlined
-          v-model="text"          
+          v-model="emails"          
           label="Emails (comma separated)"
           :rules="[val => val && val.length > 0 || 'Field is required']"
         />   
@@ -90,6 +90,9 @@ export default {
   name: 'App',  
   data () {
     return {
+      coupon: '',
+      search: '',
+      emails: '',
       text: '',
       phone: '',
       required: true,
